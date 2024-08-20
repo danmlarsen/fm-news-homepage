@@ -1,0 +1,23 @@
+//
+// Colors
+//
+$color-primary: hsl(5, 85%, 63%);
+$color-secondary: hsl(35, 77%, 62%);
+
+// Neutrals
+$color-neutral-100: hsl(36, 100%, 99%);
+$color-neutral-300: hsl(233, 8%, 79%);
+$color-neutral-500: hsl(236, 13%, 42%);
+$color-neutral-800: hsl(240, 100%, 5%);
+
+//
+// Typography
+//
+$ff-primary: 'Inter', sans-serif;
+$fw-regular: 400;
+$fw-bold: 700;
+$fw-black: 800;
+
+:root {
+    --fs-body: 1.5rem;
+}

@@ -1,0 +1,73 @@
+:root {
+  --fs-body: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  word-wrap: break-word;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+option {
+  font: inherit;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter-VariableFont_slntwght.ttf);
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-body);
+  line-height: 1.7333;
+  color: hsl(236, 13%, 42%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: hsl(240, 100%, 5%);
+  line-height: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
