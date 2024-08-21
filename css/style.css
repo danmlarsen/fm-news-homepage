@@ -68,6 +68,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 4.38px;
+  transition: color 0.2s ease-in-out;
+}
+.btn:hover, .btn:active, .btn:focus {
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(240, 100%, 5%);
 }
 
 .header {
@@ -87,6 +92,10 @@ body {
 .navigation__link:link, .navigation__link:visited {
   text-decoration: none;
   color: hsl(236, 13%, 42%);
+  transition: color 0.2s ease-in-out;
+}
+.navigation__link:hover, .navigation__link:active, .navigation__link:focus {
+  color: hsl(5, 85%, 63%);
 }
 @media screen and (max-width: 48em) {
   .navigation {
@@ -157,8 +166,16 @@ body {
   padding-bottom: 3rem;
 }
 .aside__article-title {
-  color: hsl(36, 100%, 99%);
   margin-bottom: 0.8rem;
+  color: currentColor;
+}
+.aside__article-link:link, .aside__article-link:visited {
+  color: hsl(36, 100%, 99%);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.aside__article-link:hover, .aside__article-link:active, .aside__article-link:focus {
+  color: hsl(35, 77%, 62%);
 }
 
 .articles {
@@ -207,7 +224,7 @@ body {
 
 @font-face {
   font-family: "Inter";
-  src: url(../assets/fonts/Inter-VariableFont_slntwght.ttf);
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 body {
   font-family: "Inter", sans-serif;
