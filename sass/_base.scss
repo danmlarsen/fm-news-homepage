@@ -3,9 +3,19 @@ body {
     background-color: $color-neutral-100;
     overflow-x: hidden;
 
-    @media screen and (max-width: $bp-mobile) {
+    @include respond($bp-mobile) {
         padding: 2.8rem 1.6rem;
     }
+}
+
+:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-neutral-100;
 }
 
 .btn {
@@ -39,6 +49,10 @@ body {
     max-width: 110rem;
     margin: 0 auto;
     margin-bottom: 5.51rem;
+
+    @include respond($bp-tablet) {
+        max-width: 70rem;
+    }
 }
 
 .navigation {
@@ -62,8 +76,9 @@ body {
         }
     }
 
-    @media screen and (max-width: $bp-mobile) {
+    @include respond($bp-mobile) {
         display: flex;
+        visibility: hidden;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
 
@@ -82,6 +97,7 @@ body {
         }
 
         &--open {
+            visibility: visible;
             transform: translateX(0);
         }
     }
@@ -91,6 +107,7 @@ body {
     display: none;
     border: none;
     background-color: transparent;
+    height: 100%;
     cursor: pointer;
 
     &--close {
@@ -99,7 +116,7 @@ body {
         right: 2.08rem;
     }
 
-    @media screen and (max-width: $bp-mobile) {
+    @include respond($bp-mobile) {
         display: inline-block;
     }
 }
@@ -113,7 +130,7 @@ body {
     row-gap: 7.1rem;
     column-gap: 3rem;
 
-    @media screen and (max-width: $bp-tablet) {
+    @include respond($bp-tablet) {
         max-width: 70rem;
         grid-template-columns: none;
         row-gap: 6.4rem;
@@ -132,6 +149,7 @@ body {
 
         img {
             height: 100%;
+            width: 100%;
             object-fit: cover;
         }
     }
@@ -140,7 +158,7 @@ body {
         font-size: 5.6rem;
         font-weight: $fw-black;
 
-        @media screen and (max-width: $bp-mobile) {
+        @include respond($bp-mobile) {
             font-size: 4rem;
         }
     }
@@ -152,7 +170,7 @@ body {
         gap: 3rem;
     }
 
-    @media screen and (max-width: $bp-tablet) {
+    @include respond($bp-mobile) {
         grid-template-columns: none;
     }
 }
@@ -167,7 +185,7 @@ body {
         color: $color-secondary;
         margin-bottom: 3.4rem;
 
-        @media screen and (max-width: $bp-mobile) {
+        @include respond($bp-mobile) {
             font-size: 3.2rem;
         }
     }
@@ -213,21 +231,27 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
 
-        @media screen and (max-width: $bp-mobile) {
+        @include respond($bp-tablet) {
             grid-template-columns: none;
         }
     }
 
     &__article {
         display: grid;
+        height: 100%;
         grid-template-columns: 100px 1fr;
         column-gap: 2.4rem;
         row-gap: 1rem;
-        align-items: start;
     }
 
     &__article-img {
         grid-row: 1 / span 3;
+        
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__article-number {
