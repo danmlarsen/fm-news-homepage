@@ -11,14 +11,14 @@ body {
     }
 }
 
-:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
-}
-
 ::selection {
     background-color: $color-primary;
     color: $color-neutral-100;
+}
+
+:focus-visible {
+    outline-color: $color-primary;
+    outline-offset: 3px;
 }
 
 .btn {
