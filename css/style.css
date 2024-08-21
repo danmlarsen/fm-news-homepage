@@ -52,6 +52,7 @@ ul[class] {
 body {
   padding: 8.9rem 1.6rem;
   background-color: hsl(36, 100%, 99%);
+  overflow-x: hidden;
 }
 @media screen and (max-width: 48em) {
   body {
@@ -107,8 +108,9 @@ body {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 100;
     background-color: hsl(36, 100%, 99%);
-    padding: 2.4rem;
+    padding: 14.4rem 2.4rem;
   }
   .navigation__list {
     flex-direction: column;
@@ -147,6 +149,7 @@ body {
   .main {
     max-width: 70rem;
     grid-template-columns: none;
+    row-gap: 6.4rem;
   }
 }
 
@@ -168,6 +171,11 @@ body {
   font-size: 5.6rem;
   font-weight: 800;
 }
+@media screen and (max-width: 48em) {
+  .main-article__heading {
+    font-size: 4rem;
+  }
+}
 .main-article__content {
   display: grid;
   justify-items: start;
@@ -183,11 +191,17 @@ body {
 .aside {
   background-color: hsl(240, 100%, 5%);
   padding: 3.2rem 2.4rem;
+  color: hsl(233, 8%, 79%);
 }
 .aside__heading {
   font-size: 4rem;
   color: hsl(35, 77%, 62%);
   margin-bottom: 3.4rem;
+}
+@media screen and (max-width: 48em) {
+  .aside__heading {
+    font-size: 3.2rem;
+  }
 }
 .aside__list {
   display: grid;
@@ -252,6 +266,16 @@ body {
 }
 .articles__article-link:hover, .articles__article-link:focus, .articles__article-link:active {
   color: hsl(5, 85%, 63%);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 26, 0.5);
+  z-index: 10;
 }
 
 @font-face {

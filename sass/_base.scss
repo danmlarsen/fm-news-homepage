@@ -1,6 +1,7 @@
 body {
     padding: 8.9rem 1.6rem;
     background-color: $color-neutral-100;
+    overflow-x: hidden;
 
     @media screen and (max-width: $bp-mobile) {
         padding: 2.8rem 1.6rem;
@@ -71,9 +72,10 @@ body {
         position: fixed;
         top: 0;
         right: 0;
+        z-index: 100;
         background-color: $color-neutral-100;
 
-        padding: 2.4rem;
+        padding: 14.4rem 2.4rem;
 
         &__list {
             flex-direction: column;
@@ -114,6 +116,7 @@ body {
     @media screen and (max-width: $bp-tablet) {
         max-width: 70rem;
         grid-template-columns: none;
+        row-gap: 6.4rem;
     }
 }
 
@@ -136,6 +139,10 @@ body {
     &__heading {
         font-size: 5.6rem;
         font-weight: $fw-black;
+
+        @media screen and (max-width: $bp-mobile) {
+            font-size: 4rem;
+        }
     }
 
     &__content {
@@ -153,11 +160,16 @@ body {
 .aside {
     background-color: $color-neutral-800;
     padding: 3.2rem 2.4rem;
+    color: $color-neutral-300;
 
     &__heading {
         font-size: 4rem;
         color: $color-secondary;
         margin-bottom: 3.4rem;
+
+        @media screen and (max-width: $bp-mobile) {
+            font-size: 3.2rem;
+        }
     }
 
     &__list {
@@ -246,4 +258,14 @@ body {
             color: $color-primary;
         }
     }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-neutral-800, 0.5);
+    z-index: 10;
 }
