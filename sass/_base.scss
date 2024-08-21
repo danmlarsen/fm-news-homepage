@@ -110,8 +110,11 @@ body {
     display: none;
     border: none;
     background-color: transparent;
-    height: 100%;
     cursor: pointer;
+
+    &--open {
+        height: 100%;
+    }
 
     &--close {
         position: absolute;

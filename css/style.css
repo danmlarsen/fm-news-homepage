@@ -162,8 +162,10 @@ body {
   display: none;
   border: none;
   background-color: transparent;
-  height: 100%;
   cursor: pointer;
+}
+.nav-btn--open {
+  height: 100%;
 }
 .nav-btn--close {
   position: absolute;
