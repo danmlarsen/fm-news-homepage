@@ -18,6 +18,12 @@ $fw-regular: 400;
 $fw-bold: 700;
 $fw-black: 800;
 
+//
+// Breakpoints
+//
+$bp-mobile: 48em;
+$bp-tablet: 64em;
+
 :root {
     --fs-body: 1.5rem;
 }

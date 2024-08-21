@@ -1,6 +1,24 @@
 body {
-    padding: 8.9rem 0;
+    padding: 8.9rem 1.6rem;
     background-color: $color-neutral-100;
+
+    @media screen and (max-width: $bp-mobile) {
+        padding: 2.8rem 1.6rem;
+    }
+}
+
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        padding: 1.2rem 3.2rem;
+        background-color: $color-primary;
+        color: $color-neutral-800;
+        font-weight: $fw-bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4.38px;
+    }
 }
 
 .header {
@@ -25,6 +43,10 @@ body {
         text-decoration: none;
         color: $color-neutral-500;
     }
+
+    @media screen and (max-width: $bp-mobile) {
+        display: none;
+    }
 }
 
 .main {
@@ -35,6 +57,11 @@ body {
     grid-template-columns: 1fr 35rem;
     row-gap: 7.1rem;
     column-gap: 3rem;
+
+    @media screen and (max-width: $bp-tablet) {
+        max-width: 70rem;
+        grid-template-columns: none;
+    }
 }
 
 .main-article {
@@ -57,6 +84,17 @@ body {
         font-size: 5.6rem;
         font-weight: $fw-black;
     }
+
+    &__content {
+        display: grid;
+        justify-items: start;
+        align-items: start;
+        gap: 3rem;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+        grid-template-columns: none;
+    }
 }
 
 .aside {
@@ -66,13 +104,24 @@ body {
     &__heading {
         font-size: 4rem;
         color: $color-secondary;
+        margin-bottom: 3.4rem;
     }
 
     &__list {
+        display: grid;
+        row-gap: 3rem;
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-neutral-300;
+            padding-bottom: 3rem;
+        }
     }
 
     &__article-title {
         color: $color-neutral-100;
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -82,5 +131,51 @@ body {
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+
+        @media screen and (max-width: $bp-mobile) {
+            grid-template-columns: none;
+        }
+    }
+
+    &__article {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        column-gap: 2.4rem;
+        row-gap: 1rem;
+        align-items: start;
+    }
+
+    &__article-img {
+        grid-row: 1 / span 3;
+    }
+
+    &__article-number {
+        color: $color-primary;
+        font-size: 3.2rem;
+        line-height: 1;
+        font-weight: $fw-bold;
+    }
+
+    &__article-title {
+        font-size: 1.8rem;
+        line-height: 1.3333;
+        font-weight: $fw-black;
+        color: currentColor;
+    }
+
+    &__article-link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-neutral-800;
+            transition: color 0.2s ease-in-out;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-primary;
+        }
     }
 }

@@ -50,8 +50,24 @@ ul[class] {
 }
 
 body {
-  padding: 8.9rem 0;
+  padding: 8.9rem 1.6rem;
   background-color: hsl(36, 100%, 99%);
+}
+@media screen and (max-width: 48em) {
+  body {
+    padding: 2.8rem 1.6rem;
+  }
+}
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(240, 100%, 5%);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4.38px;
 }
 
 .header {
@@ -72,6 +88,11 @@ body {
   text-decoration: none;
   color: hsl(236, 13%, 42%);
 }
+@media screen and (max-width: 48em) {
+  .navigation {
+    display: none;
+  }
+}
 
 .main {
   max-width: 110rem;
@@ -80,6 +101,12 @@ body {
   grid-template-columns: 1fr 35rem;
   row-gap: 7.1rem;
   column-gap: 3rem;
+}
+@media screen and (max-width: 64em) {
+  .main {
+    max-width: 70rem;
+    grid-template-columns: none;
+  }
 }
 
 .main-article {
@@ -100,6 +127,17 @@ body {
   font-size: 5.6rem;
   font-weight: 800;
 }
+.main-article__content {
+  display: grid;
+  justify-items: start;
+  align-items: start;
+  gap: 3rem;
+}
+@media screen and (max-width: 64em) {
+  .main-article {
+    grid-template-columns: none;
+  }
+}
 
 .aside {
   background-color: hsl(240, 100%, 5%);
@@ -108,9 +146,19 @@ body {
 .aside__heading {
   font-size: 4rem;
   color: hsl(35, 77%, 62%);
+  margin-bottom: 3.4rem;
+}
+.aside__list {
+  display: grid;
+  row-gap: 3rem;
+}
+.aside__list-item:not(:last-child) {
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+  padding-bottom: 3rem;
 }
 .aside__article-title {
   color: hsl(36, 100%, 99%);
+  margin-bottom: 0.8rem;
 }
 
 .articles {
@@ -119,6 +167,42 @@ body {
 .articles__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+@media screen and (max-width: 48em) {
+  .articles__list {
+    grid-template-columns: none;
+  }
+}
+.articles__article {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 2.4rem;
+  row-gap: 1rem;
+  align-items: start;
+}
+.articles__article-img {
+  grid-row: 1/span 3;
+}
+.articles__article-number {
+  color: hsl(5, 85%, 63%);
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.articles__article-title {
+  font-size: 1.8rem;
+  line-height: 1.3333;
+  font-weight: 800;
+  color: currentColor;
+}
+.articles__article-link:link, .articles__article-link:visited {
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+  transition: color 0.2s ease-in-out;
+}
+.articles__article-link:hover, .articles__article-link:focus, .articles__article-link:active {
+  color: hsl(5, 85%, 63%);
 }
 
 @font-face {
