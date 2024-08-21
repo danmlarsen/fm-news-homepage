@@ -99,7 +99,39 @@ body {
 }
 @media screen and (max-width: 48em) {
   .navigation {
-    display: none;
+    display: flex;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: hsl(36, 100%, 99%);
+    padding: 2.4rem;
+  }
+  .navigation__list {
+    flex-direction: column;
+  }
+  .navigation--open {
+    transform: translateX(0);
+  }
+}
+
+.nav-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.nav-btn--close {
+  position: absolute;
+  top: 2.73rem;
+  right: 2.08rem;
+}
+@media screen and (max-width: 48em) {
+  .nav-btn {
+    display: inline-block;
   }
 }
 

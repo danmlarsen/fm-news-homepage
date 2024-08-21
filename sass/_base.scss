@@ -18,14 +18,14 @@ body {
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 4.38px;
-        transition: color .2s ease-in-out;
+        transition: color 0.2s ease-in-out;
     }
 
     &:hover,
     &:active,
     &:focus {
         color: $color-neutral-100;
-        background-color: $color-neutral-800
+        background-color: $color-neutral-800;
     }
 }
 
@@ -51,7 +51,7 @@ body {
         &:visited {
             text-decoration: none;
             color: $color-neutral-500;
-            transition: color .2s ease-in-out;
+            transition: color 0.2s ease-in-out;
         }
 
         &:hover,
@@ -60,10 +60,45 @@ body {
             color: $color-primary;
         }
     }
-    
 
     @media screen and (max-width: $bp-mobile) {
-        display: none;
+        display: flex;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+
+        height: 100vh;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $color-neutral-100;
+
+        padding: 2.4rem;
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &--open {
+            transform: translateX(0);
+        }
+    }
+}
+
+.nav-btn {
+    display: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--close {
+        position: absolute;
+        top: 2.73rem;
+        right: 2.08rem;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+        display: inline-block;
     }
 }
 
@@ -147,7 +182,7 @@ body {
         &:visited {
             color: $color-neutral-100;
             text-decoration: none;
-            transition: color .2s ease-in-out;
+            transition: color 0.2s ease-in-out;
         }
 
         &:hover,

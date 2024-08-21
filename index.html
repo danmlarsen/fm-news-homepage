@@ -7,11 +7,16 @@
 
         <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon" />
         <link rel="stylesheet" href="css/style.css" />
+
+        <script defer src="js/script.js"></script>
     </head>
     <body>
         <header class="header">
             <img src="./assets/images/logo.svg" alt="W Logo" class="header__logo" />
             <nav class="navigation">
+                <button class="nav-btn nav-btn--close" id="close-menu-btn" aria-label="Close navigation menu">
+                    <img src="assets/images/icon-menu-close.svg" alt="Close navigation menu icon" />
+                </button>
                 <ul class="navigation__list">
                     <li class="navigation__list-item"><a href="#" class="navigation__link">Home</a></li>
                     <li class="navigation__list-item"><a href="#" class="navigation__link">New</a></li>
@@ -20,6 +25,9 @@
                     <li class="navigation__list-item"><a href="#" class="navigation__link">Categories</a></li>
                 </ul>
             </nav>
+            <button class="nav-btn nav-btn--open" id="open-menu-btn" aria-label="Open navigation menu">
+                <img src="assets/images/icon-menu.svg" alt="Open navigation menu" class="nav-btn__icon" />
+            </button>
         </header>
         <main class="main">
             <article class="main-article">
