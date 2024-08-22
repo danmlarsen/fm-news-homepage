@@ -30,10 +30,12 @@ body.nav-open {
     &:link,
     &:visited {
         display: inline-block;
-        padding: 1.2rem 3.2rem;
+        padding: 1.2rem 3.15rem;
         background-color: $color-primary;
         color: $color-neutral-800;
+        font-size: 1.4rem;
         font-weight: $fw-bold;
+        line-height: 1.714;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 4.38px;
@@ -52,7 +54,6 @@ body.nav-open {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-
     min-height: 4rem;
     max-width: 110rem;
     margin: 0 auto;
@@ -88,8 +89,7 @@ body.nav-open {
         display: flex;
         visibility: hidden;
         transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-
+        transition: all 0.3s ease-in-out;
         height: 100vh;
         width: 70%;
         position: fixed;
@@ -97,7 +97,6 @@ body.nav-open {
         right: 0;
         z-index: 100;
         background-color: $color-neutral-100;
-
         padding: 14.4rem 2.4rem 0;
 
         &__list {
@@ -133,9 +132,8 @@ body.nav-open {
 }
 
 .main {
-    max-width: 110rem;
+    max-width: 111rem;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 1fr 35rem;
     row-gap: 7.1rem;
@@ -151,8 +149,7 @@ body.nav-open {
 .main-article {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 2.8rem;
-    column-gap: 3rem;
+    gap: 3rem;
 
     &__image {
         grid-column: 1 / -1;
@@ -166,12 +163,7 @@ body.nav-open {
     }
 
     &__heading {
-        font-size: 5.6rem;
-        font-weight: $fw-black;
-
-        @include respond($bp-mobile) {
-            font-size: 4rem;
-        }
+        padding-top: 0.4rem;
     }
 
     &__content {
@@ -192,13 +184,8 @@ body.nav-open {
     color: $color-neutral-300;
 
     &__heading {
-        font-size: 4rem;
         color: $color-secondary;
         margin-bottom: 3.4rem;
-
-        @include respond($bp-mobile) {
-            font-size: 3.2rem;
-        }
     }
 
     &__list {
@@ -214,8 +201,6 @@ body.nav-open {
     }
 
     &__article-title {
-        font-size: 2rem;
-        line-height: 1.2;
         margin-bottom: 0.8rem;
         color: currentColor;
     }
@@ -269,15 +254,12 @@ body.nav-open {
 
     &__article-number {
         color: $color-primary;
-        font-size: 3.2rem;
+        font-size: var(--fs-heading-md);
         line-height: 1;
         font-weight: $fw-bold;
     }
 
     &__article-title {
-        font-size: 1.8rem;
-        line-height: 1.3333;
-        font-weight: $fw-black;
         color: currentColor;
     }
 

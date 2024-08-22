@@ -23,7 +23,13 @@ $fw-black: 800;
 //
 $bp-mobile: 37.5em;
 $bp-tablet: 64em;
+$bp-desktop-xl: 160em;
 
 :root {
     --fs-body: 1.5rem;
+    --fs-heading-xl: 5.6rem;
+    --fs-heading-lg: 4rem;
+    --fs-heading-md: 3.2rem;
+    --fs-heading-sm: 2rem;
+    --fs-heading-xs: 1.8rem;
 }

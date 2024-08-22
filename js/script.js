@@ -1,5 +1,4 @@
 const openMenuBtnEl = document.getElementById('open-menu-btn');
-const closeMenuBtnEl = document.getElementById('close-menu-btn');
 const navigationMenuEl = document.getElementById('navigation');
 const backdropEl = document.getElementById('backdrop');
 
@@ -17,8 +16,18 @@ const closeNav = function () {
     navigationMenuEl.classList.remove('navigation--open');
 };
 
+const handleNavClick = function (e) {
+    if (!this.classList.contains('navigation--open')) return;
+
+    if (e.target.closest('.navigation__link') || e.target.closest('.nav-btn--close')) {
+        closeNav();
+    }
+};
+
 const handleNavFocusOut = function (e) {
     const links = this.querySelectorAll('.navigation__link');
+    if (links.length === 0) return;
+
     const lastLink = links[links.length - 1];
 
     if (e.target === lastLink) {
@@ -27,6 +36,6 @@ const handleNavFocusOut = function (e) {
 };
 
 openMenuBtnEl.addEventListener('click', openNav);
-closeMenuBtnEl.addEventListener('click', closeNav);
 backdropEl.addEventListener('click', closeNav);
+navigationMenuEl.addEventListener('click', handleNavClick);
 navigationMenuEl.addEventListener('focusout', handleNavFocusOut);

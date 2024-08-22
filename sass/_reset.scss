@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 *,
 *::before,
 *::after {
@@ -9,6 +11,10 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @media screen and (min-width: $bp-desktop-xl) {
+        font-size: 90%;
+    }
 }
 
 body {
