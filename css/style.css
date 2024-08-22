@@ -254,6 +254,8 @@ body {
   padding-bottom: 3rem;
 }
 .aside__article-title {
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 0.8rem;
   color: currentColor;
 }
