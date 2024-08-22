@@ -81,6 +81,11 @@ body {
   }
 }
 
+body.nav-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 ::selection {
   background-color: hsl(5, 85%, 63%);
   color: hsl(36, 100%, 99%);

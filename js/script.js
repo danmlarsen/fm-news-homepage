@@ -6,11 +6,13 @@ const backdropEl = document.getElementById('backdrop');
 const openNav = function (e) {
     e.preventDefault();
 
+    document.body.classList.add('nav-open');
     navigationMenuEl.classList.add('navigation--open');
     backdropEl.classList.add('backdrop--show');
 };
 
 const closeNav = function () {
+    document.body.classList.remove('nav-open');
     backdropEl.classList.remove('backdrop--show');
     navigationMenuEl.classList.remove('navigation--open');
 };

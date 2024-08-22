@@ -11,6 +11,11 @@ body {
     }
 }
 
+body.nav-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
 ::selection {
     background-color: $color-primary;
     color: $color-neutral-100;
