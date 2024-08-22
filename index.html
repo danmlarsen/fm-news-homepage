@@ -13,7 +13,10 @@
     <body>
         <header class="header">
             <img src="./assets/images/logo.svg" alt="W Logo" class="header__logo" />
-            <nav class="navigation">
+            <button class="nav-btn nav-btn--open" id="open-menu-btn" aria-label="Open navigation button">
+                <img src="assets/images/icon-menu.svg" alt="Open navigation icon" class="nav-btn__icon" />
+            </button>
+            <nav class="navigation" id="navigation">
                 <button class="nav-btn nav-btn--close" id="close-menu-btn" aria-label="Close navigation button">
                     <img src="assets/images/icon-menu-close.svg" alt="Close navigation icon" />
                 </button>
@@ -25,9 +28,6 @@
                     <li class="navigation__list-item"><a href="#" class="navigation__link">Categories</a></li>
                 </ul>
             </nav>
-            <button class="nav-btn nav-btn--open" id="open-menu-btn" aria-label="Open navigation button">
-                <img src="assets/images/icon-menu.svg" alt="Open navigation icon" class="nav-btn__icon" />
-            </button>
         </header>
         <main class="main">
             <article class="main-article">
@@ -113,5 +113,6 @@
                 </ul>
             </section>
         </main>
+        <div class="backdrop" id="backdrop">&nbsp;</div>
     </body>
 </html>
