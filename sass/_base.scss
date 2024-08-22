@@ -148,7 +148,7 @@ body.nav-open {
 
 .main-article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
     gap: 3rem;
 
     &__image {
@@ -171,10 +171,6 @@ body.nav-open {
         justify-items: start;
         align-items: start;
         gap: 3rem;
-    }
-
-    @include respond($bp-mobile) {
-        grid-template-columns: none;
     }
 }
 
@@ -226,12 +222,8 @@ body.nav-open {
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
         gap: 3rem;
-
-        @include respond($bp-tablet) {
-            grid-template-columns: none;
-        }
     }
 
     &__article {

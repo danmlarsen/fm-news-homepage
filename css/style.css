@@ -59,6 +59,16 @@ ul[class] {
   list-style: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 @font-face {
   font-family: "Inter";
   src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
@@ -243,7 +253,7 @@ body.nav-open {
 
 .main-article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   gap: 3rem;
 }
 .main-article__image {
@@ -263,11 +273,6 @@ body.nav-open {
   justify-items: start;
   align-items: start;
   gap: 3rem;
-}
-@media screen and (max-width: 37.5em) {
-  .main-article {
-    grid-template-columns: none;
-  }
 }
 
 .aside {
@@ -305,13 +310,8 @@ body.nav-open {
 }
 .articles__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
   gap: 3rem;
-}
-@media screen and (max-width: 64em) {
-  .articles__list {
-    grid-template-columns: none;
-  }
 }
 .articles__article {
   display: grid;
